@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://nene16.github.io/3-column-preview-card/)
+- Live Site URL: (https://nene16.github.io/3-column-preview-card/)
 
 ## My process
 
