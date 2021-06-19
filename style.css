@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+Legend:
+    (00) Root 
+    (01) Style Color&Font
+        (1.1) 
+        (1.2) 
+        (1.3) 
+        (1.4) 
+    (02) Flex box
+        (2.1) 
+        (2.2)
+        (2.3)
+    (S) Media Device 
+        (S.1) Media Tablet
+        (S.2) Media smartphone
+*/
+
+
+
+/* (00) Root  */
+:root {
+    /* palette di base*/
+    --CLM1: hsl(31, 77%, 52%);
+    --CLM2:hsl(184, 100%, 22%);
+    --CLM3:hsl(179, 100%, 13%);
+    --parag:hsla(0, 0%, 100%, 0.75);
+    --bcg:hsl(0, 0%, 95%);
+
+    /* font size */
+    --xl:40px;
+    --md:15px;
+
+    /* Type Weight */
+    --bold: 700;
+    --regular: 400;
+   
+
+    /* Margin and Padding */
+    --spaceXL: 96px;
+    --spaceLG: 72px;
+    --spaceMD: 48px;
+    --spaceSM: 24px;
+    --spaceXS: 12px;
+}
+
+/* (01) Body */
+body {
+    background-color: var(--bcg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+/* (01) Style Color&Font */
+
+.container{
+  color: var(--bcg);  
+  border-radius: 7px;
+  overflow: auto;
+}
+.CLM1 {
+    background-color: var(--CLM1);
+}
+.CLM2 {
+    background-color: var(--CLM2);
+}
+.CLM3 {
+    background-color: var(--CLM3);
+}
+.CLM h1 {
+    font-size: var(--xl);
+    font-weight: var(--bold);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+.CLM p {
+    font-size: var(--md);
+    font-weight: var(--regular);
+    line-height: 1.6;
+    word-spacing: 1px;
+    opacity: 70%;
+}
+.CLM1 button {
+    color: var(--CLM1);
+}
+.CLM1 button:hover {
+    background-color: var(--CLM1);
+    color: var(--bcg);
+    border: 1px solid var(--bcg);
+}
+.CLM2 button {
+    color: var(--CLM2);
+}
+.CLM2 button:hover {
+    background-color: var(--CLM2);
+    color: var(--bcg);
+    border: 1px solid var(--bcg);
+}
+.CLM3 button {
+    color: var(--CLM3);
+}
+.CLM3 button:hover {
+    background-color: var(--CLM3);
+    color: var(--bcg);
+    border: 1px solid var(--bcg);
+}
+button {
+    font-size: var(--md);
+    background-color: var(--bcg);
+    text-transform: capitalize;
+    margin-right: 70px;
+    padding: 14px 28px;
+    border-radius:30px;
+    border: none;
+}
+
+/* (02) Flex box */
+
+.container {
+    display: flex;
+    max-width: 900px;
+    height: auto;
+    margin:0 auto;
+}
+.CLM {
+    padding: 40px;
+    display:flex;
+    width: 100vw;
+    height: 500px;
+}
+.CLMpar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.CLMpar img {
+    display: block;
+    width:64px; 
+    height:40px;
+    margin-bottom: 20px;
+}
+
+.CLMpar p {
+    margin-bottom: 75px;
+}
+
+/* (S) Media Device */
+
+@media all and (max-width:899px) {
+
+.container {
+    max-width: 325px;
+    height: 1325px;
+    flex-direction: column;
+    margin: auto;
+}
+.CLM {
+    width: auto;
+    padding: 45px;
+}
+
+.CLMpar img {
+    margin-top: 5px;
+}
+.CLMpar h1 {
+    margin-top: 10px;
+}
+.CLMpar p {
+    margin-top: 27px;
+    margin-bottom: 0px;
+}
+button {
+    margin-top: 10px;
+    margin-right: 85px;
+}
+
+
+}
+
+/* (Z) border area viewport*/
+/*
+.container, 
+.CLM1,
+.CLM2,
+.CLM3,
+.CLMpar,
+img, 
+h1,
+p,
+button {
+    border: 0.5px dashed rgb(116, 116, 116);
+}
+*/
